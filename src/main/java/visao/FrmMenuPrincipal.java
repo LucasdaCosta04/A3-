@@ -39,12 +39,27 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         jMenuArquivo.setText("Arquivo");
 
         jMenuItemAluno.setText("Cadastrar Aluno");
+        jMenuItemAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemAlunoActionPerformed(evt);
+            }
+        });
         jMenuArquivo.add(jMenuItemAluno);
 
         jMenuGerenciarAluno.setText("Gerenciar alunos");
+        jMenuGerenciarAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuGerenciarAlunoActionPerformed(evt);
+            }
+        });
         jMenuArquivo.add(jMenuGerenciarAluno);
 
         jMenuItemSair.setText("Sair");
+        jMenuItemSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSairActionPerformed(evt);
+            }
+        });
         jMenuArquivo.add(jMenuItemSair);
 
         jMenuBar1.add(jMenuArquivo);
@@ -67,6 +82,24 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItemAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAlunoActionPerformed
+        // TODO add your handling code here:  
+// Instancia a tela de cadastro de aluno
+FrmCadastroAluno objeto = new FrmCadastroAluno();
+objeto.setVisible(true);
+    }//GEN-LAST:event_jMenuItemAlunoActionPerformed
+
+    private void jMenuGerenciarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuGerenciarAlunoActionPerformed
+        // TODO add your handling code here:
+        FrmGerenciaAluno objeto = new FrmGerenciaAluno();
+objeto.setVisible(true);
+    }//GEN-LAST:event_jMenuGerenciarAlunoActionPerformed
+
+    private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     /**
      * @param args the command line arguments
